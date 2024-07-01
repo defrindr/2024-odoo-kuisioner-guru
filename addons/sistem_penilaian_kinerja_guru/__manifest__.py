@@ -25,6 +25,7 @@
     'data': [
         'security/res_groups.xml',
         'security/ir.model.access.csv',
+        'security/ir_rule.xml',  # Path ke file ir_rule.xml
         'reports/report_total_nilai.xml',
         'views/views.xml',
         'views/templates.xml',

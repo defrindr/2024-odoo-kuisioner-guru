@@ -12,8 +12,9 @@ class PenilaianTemanSejawat(models.Model):
     _description = 'Model untuk tabel data penilaian guru teman sejawat'
 
     name = fields.Date(string='Tanggal Penilaian', default=datetime.now(), required=True)
-    nama_responden = fields.Char(string='Nama Responden', required=True)
+    nama_responden = fields.Char(string='Nama Responden', default=lambda self: self.env.user.name, readonly=True)
     jabatan = fields.Char(string='Jabatan', default='Guru', readonly=True)
+    creator_id = fields.Many2one('res.users', string='Creator', default=lambda self: self.env.user, readonly=True)
     data_guru_id = fields.Many2one(comodel_name='data.guru', string='Guru yang di nilai', required=True, ondelete="cascade")
 
     # ini kuisioner di dalam notebook :
