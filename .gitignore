@@ -1,0 +1,4 @@
+resources/T*
+odoo-web-data
+addons/sis*.zip
+__pycache__

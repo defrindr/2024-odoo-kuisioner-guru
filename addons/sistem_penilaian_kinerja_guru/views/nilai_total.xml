@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="1">
+        <record id="nilai_total_form" model="ir.ui.view">
+            <field name="name">nilai_total_form</field>
+            <field name="model">nilai.total</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                    </header>
+                     <sheet>
+                      <h3 align="center"><b>Nilai Total Penilaian Guru</b></h3>
+                        <group>
+                            <field name="name" />
+                            <field name="data_guru_id" />
+                        </group>
+                        <group>
+                            <group string="Hasil Penilaian Kepala Sekolah">
+                                <field name="penilaian_kepala_sekolah" />
+                                <br></br>
+                                <field name="hasil_nilai_bobot_kepala_sekolah" />
+                            </group>
+                            <group string="Hasil Penilaian Teman Sejawat">
+                                <field name="penilaian_teman_sejawat" />
+                                <br></br>
+                                <field name="hasil_nilai_bobot_teman_sejawat" />
+                            </group>
+                            <group string="Hasil Penilaian Peserta Didik">
+                                <field name="penilaian_peserta_didik" />
+                                <br></br>
+                                <field name="hasil_nilai_bobot_peserta_didik" />
+                            </group>
+                            <group string="Hasil Penilaian Wali Murid">
+                                <field name="penilaian_wali_murit" />
+                                <br></br>
+                                <field name="hasil_nilai_bobot_wali_murit" />
+                            </group>
+                          </group>
+                        <group string="Total Nilai Penilaian">
+                            <field name="total_nilai" decoration-bf="total_nilai" decoration-danger="total_nilai"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="nilai_total_tree" model="ir.ui.view">
+            <field name="name">nilai_total_tree</field>
+            <field name="model">nilai.total</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="name" />
+                    <field name="data_guru_id" />
+                    <field name="penilaian_kepala_sekolah" />
+                    <field name="penilaian_teman_sejawat" />
+                    <field name="penilaian_peserta_didik" />
+                    <field name="penilaian_wali_murit" />
+                    <field name="total_nilai" decoration-bf="total_nilai" decoration-danger="total_nilai"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="nilai_total_action" model="ir.actions.act_window">
+            <field name="name">Data Nilai Total Penilaian Kinerja Guru Setiap Responden</field>
+            <field name="res_model">nilai.total</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        
+    <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+        <menuitem 
+            id="penilaian_kinerja_guru_menu_root" 
+            name="Sistem Penilaian Kinerja Guru" 
+            web_icon="sistem_penilaian_kinerja_guru,static/description/icon.png"
+            sequence="2"/>
+
+    <!-- This Menu Item must have a parent and an action -->
+        <menuitem 
+            id="nilai_total_menu_act" 
+            name="Nilai Total" 
+            parent="penilaian_kinerja_guru_menu_root" 
+            action="nilai_total_action" 
+            sequence="50"/>
+    </data>
+</odoo>

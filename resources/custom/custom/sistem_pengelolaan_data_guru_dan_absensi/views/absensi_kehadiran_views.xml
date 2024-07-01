@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="absensi_kehadiran_form" model="ir.ui.view">
+            <field name="name">absensi_kehadiran_form</field>
+            <field name="model">absensi.kehadiran</field>
+            <field name="arch" type="xml">
+                <form string="Data Absensi Kehadiran">
+                    <sheet>
+                    <h1 align="center"><b>Data Absensi Guru</b></h1>
+                        <group>
+                            <field name="is_invisible" invisible="1" />
+                            <field name="name" />
+                            <field name="nama_guru" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="kehadiran" widget="radio"/>
+                            <field name="check_in" widget="float_time" attrs="{'invisible':[('is_invisible','=',False)]}"/>
+                            <field name="check_out" widget="float_time" attrs="{'invisible':[('is_invisible','=',False)]}"/>
+                            <field name="terlambat" widget="float_time" attrs="{'invisible':[('is_invisible','=',False)]}"/>
+                            <field name="keterangan" widget="radio" options="{'horizontal': true}" attrs="{'invisible':['|',('kehadiran','=',False),('is_invisible','=',True)]}"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="absensi_kehadiran_tree" model="ir.ui.view">
+            <field name="name">absensi_kehadiran_tree</field>
+            <field name="model">absensi.kehadiran</field>
+            <field name="arch" type="xml">
+                <tree string="List Data Absensi Kehadiran" decoration-success="kehadiran == 'hadir'" decoration-warning="kehadiran == 'tidak hadir'">
+                    <field name="name" />
+                    <field name="nama_guru" />
+                    <field name="kehadiran" />
+                    <field name="check_in" />
+                    <field name="check_out" />
+                    <field name="terlambat" />
+                    <field name="keterangan" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="absensi_kehadiran_action" model="ir.actions.act_window">
+            <field name="name">Data Absensi Kehadiran</field>
+            <field name="res_model">absensi.kehadiran</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+        <menuitem 
+            id="sistem_penilaian_kinerja_guru_menu_root" 
+            name="Pengelolaan Data Guru dan Absensi" 
+            web_icon="sistem_pengelolaan_data_guru_dan_absensi,static/description/icon.png"
+            sequence="1"/>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem 
+            id="absensi_kehadiran_menu_act" 
+            name="Absensi Kehadiran Guru" 
+            parent="sistem_penilaian_kinerja_guru_menu_root" 
+            action="absensi_kehadiran_action" 
+            groups="group_guru"
+            sequence="20"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="1">
+        <record id="penilaian_kepala_sekolah_form" model="ir.ui.view">
+            <field name="name">penilaian_kepala_sekolah.form</field>
+            <field name="model">penilaian.kepala.sekolah</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                    </header>
+                    <sheet>
+                    <h1 align="center"><b>Penilaian Oleh Kepala sekolah</b></h1>
+                        <group string="">
+                            <field name="name" />
+                            <field name="nama_responden" />
+                            <field name="jabatan" />
+                            <field name="data_guru_id" />
+                            <field name="pembagi" invisible="1" />
+                        </group>
+                        <notebook>
+                            <page string="Mengenal Karakteristik Peserta Didik">
+                                <group>
+                                    <group>
+                                        <field name="a" widget="radio"/>
+                                        <br></br>
+                                        <field name="b" widget="radio"/>
+                                        <br></br>
+                                        <field name="c" widget="radio"/>
+                                        <br></br>
+                                        <field name="d" widget="radio"/>
+                                    </group>
+                                    <group>
+                                        <field name="e" widget="radio"/>
+                                        <br></br>
+                                        <field name="f" widget="radio"/>
+                                        <br></br>
+                                        <field name="g" widget="radio"/>
+                                        <br></br>
+                                        <field name="h" widget="radio"/>
+                                    </group> 
+                                </group>
+                                <h3 align="center"><b>Nilai Mengenal Karakteristik Peserta Didik : <field name="nilai_total_karakteristik_peserta_didik" decoration-bf="nilai_total_karakteristik_peserta_didik" decoration-success="nilai_total_karakteristik_peserta_didik"/></b></h3>
+                            </page>
+                            <page string='Penguasaan Teori dan prinsip Pembelajaran yg mendidik'>
+                                <group>
+                                    <group>
+                                        <field name="a1" widget="radio"/>
+                                        <br></br>
+                                        <field name="b1" widget="radio"/>
+                                        <br></br>
+                                        <field name="c1" widget="radio"/>
+                                        <br></br>
+                                        <field name="d1" widget="radio"/>
+                                    </group>
+                                    <group>
+                                        <field name="e1" widget="radio"/>
+                                        <br></br>
+                                        <field name="f1" widget="radio"/>
+                                        <br></br>
+                                        <field name="g1" widget="radio"/>
+                                        <br></br>
+                                        <field name="h1" widget="radio"/>
+                                    </group> 
+                                </group>
+                                <h3 align="center"><b>Nilai Penguasaan Teori dan prinsip Pembelajaran yg mendidik : <field name="nilai_total_teori_belajar_dan_prinsip_pembelajaran_yg_mendidik" decoration-bf="nilai_total_teori_belajar_dan_prinsip_pembelajaran_yg_mendidik" decoration-success="nilai_total_teori_belajar_dan_prinsip_pembelajaran_yg_mendidik"/></b></h3>
+                            </page>
+                            <page string='Pengembangan Kurikulum'>
+                                <group>
+                                    <group>
+                                        <field name="a2" widget="radio"/>
+                                        <br></br>
+                                        <field name="b2" widget="radio"/>
+                                        <br></br>
+                                        <field name="c2" widget="radio"/>
+                                        <br></br>
+                                        <field name="d2" widget="radio"/>
+                                        <br></br>
+                                        <field name="e2" widget="radio"/>
+                                    </group>
+                                    <group>
+                                        <field name="f2" widget="radio"/>
+                                        <br></br>
+                                        <field name="g2" widget="radio"/>
+                                        <br></br>
+                                        <field name="h2" widget="radio"/>
+                                        <br></br>
+                                        <field name="i2" widget="radio"/>
+                                        <br></br>
+                                        <field name="j2" widget="radio"/>
+                                    </group> 
+                                </group>
+                                <h3 align="center"><b>Nilai Pengembangan Kurikulum : <field name="nilai_total_pengembangan_kurikulum" decoration-bf="nilai_total_pengembangan_kurikulum" decoration-success="nilai_total_pengembangan_kurikulum"/></b></h3>
+                            </page>
+                            <page string='Guru bertindak sesuai norma,agama,hukum,sosial dan kebudayaan nasional'>
+                                <group>
+                                    <group>
+                                        <field name="a3" widget="radio"/>
+                                        <br></br>
+                                        <field name="b3" widget="radio"/>
+                                        <br></br>
+                                        <field name="c3" widget="radio"/>
+                                        <br></br>
+                                        <field name="d3" widget="radio"/>
+                                    </group>
+                                    <group>
+                                        <field name="e3" widget="radio"/>
+                                        <br></br>
+                                        <field name="f3" widget="radio"/>
+                                        <br></br>
+                                        <field name="g3" widget="radio"/>
+                                        <br></br>
+                                        <field name="h3" widget="radio"/>
+                                    </group> 
+                                </group>
+                                <h3 align="center"><b>Nilai Guru bertindak sesuai norma,agama,hukum,sosial dan kebudayaan nasional : <field name="nilai_total_guru_bertindak_sesuai_norma_agama" decoration-bf="nilai_total_guru_bertindak_sesuai_norma_agama" decoration-success="nilai_total_guru_bertindak_sesuai_norma_agama"/></b></h3>
+                            </page>
+                            <page string='Guru Menunjukkan pribadi dewasa dan teladan'>
+                                <group>
+                                    <group>
+                                        <field name="a4" widget="radio"/>
+                                        <br></br>
+                                        <field name="b4" widget="radio"/>
+                                        <br></br>
+                                        <field name="c4" widget="radio"/>
+                                        <br></br>
+                                        <field name="d4" widget="radio"/>
+                                        <br></br>
+                                        <field name="e4" widget="radio"/>
+                                    </group>
+                                    <group>
+                                        <field name="f4" widget="radio"/>
+                                        <br></br>
+                                        <field name="g4" widget="radio"/>
+                                        <br></br>
+                                        <field name="h4" widget="radio"/>
+                                        <br></br>
+                                        <field name="i4" widget="radio"/>
+                                        <br></br>
+                                        <field name="j4" widget="radio"/>
+                                    </group> 
+                                </group>
+                                <h3 align="center"><b>Nilai Guru Menunjukkan pribadi dewasa dan teladan : <field name="nilai_total_guru_menunjukan_pribadi_dewasa_dan_teladan" decoration-bf="nilai_total_guru_menunjukan_pribadi_dewasa_dan_teladan" decoration-success="nilai_total_guru_menunjukan_pribadi_dewasa_dan_teladan"/></b></h3>
+                            </page>
+                            <page string="NILAI KINERJA">
+                                <group>
+                                    <group>
+                                        <field name="nilai_total_karakteristik_peserta_didik" string="Nilai Mengenal Karakteristik Peserta Didik"/>
+                                        <br></br>
+                                        <field name="nilai_total_teori_belajar_dan_prinsip_pembelajaran_yg_mendidik" string="Nilai Penguasaan Teori dan prinsip Pembelajaran yg mendidik"/>
+                                        <br></br>
+                                        <field name="nilai_total_pengembangan_kurikulum" string="Nilai Pengembangan Kurikulum"/>
+                                        <br></br>
+                                        <field name="nilai_total_guru_bertindak_sesuai_norma_agama" string="Nilai Guru bertindak sesuai norma,agama,hukum,sosial dan kebudayaan nasional"/>
+                                        <br></br>
+                                        <field name="nilai_total_guru_menunjukan_pribadi_dewasa_dan_teladan" string="Nilai Guru Menunjukkan pribadi dewasa dan teladan"/>
+                                    </group>
+                                    <group string='Perhitungan Rumus Nilai Kinerja = (Jumlah skor/skor maksimum) x 100'>
+                                        <field name="jumlah_indikator" />
+                                        <field name="skor_maksimum" />
+                                        <field name="jumlah_skor" />
+                                        <br></br>
+                                        <field name="nilai_kinerja" decoration-bf="nilai_kinerja" decoration-danger="nilai_kinerja"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="penilaian_kepala_sekolah_tree" model="ir.ui.view">
+            <field name="name">penilaian_kepala_sekolah.tree</field>
+            <field name="model">penilaian.kepala.sekolah</field>
+            <field name="arch" type="xml">
+                <tree string="List penilaian kepala sekolah">
+                    <field name="name" />
+                    <field name="nama_responden" />
+                    <field name="jabatan" />
+                    <field name="data_guru_id" />
+                    <field name="nilai_kinerja" decoration-bf="nilai_kinerja" decoration-danger="nilai_kinerja" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="penilaian_kepala_sekolah_action" model="ir.actions.act_window">
+            <field name="name">Penilaian Kinerja Guru oleh Kepala Sekolah</field>
+            <field name="res_model">penilaian.kepala.sekolah</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+        <menuitem 
+            id="penilaian_kinerja_guru_menu_root" 
+            name="Sistem Penilaian Kinerja Guru" 
+            web_icon="sistem_penilaian_kinerja_guru,static/description/icon.png"
+            sequence="2"/>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem 
+            id="penilaian_kepala_sekolah_menu_act" 
+            name="Form Penilaian Kepala Sekolah" 
+            parent="penilaian_kinerja_guru_menu_root" 
+            action="penilaian_kepala_sekolah_action" 
+            sequence="10"/>
+    </data>
+</odoo>

@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="category_admin_kinerja_guru" model="ir.module.category">
+            <field name="name">Akses Modul Penilaian Kinerja Guru</field>
+        </record>
+
+        
+        <record id="group_kinerja_guru" model="res.groups">
+            <field name="name">Read Only Data Penilaian Kinerja Guru</field>
+            <field name="category_id" ref="category_admin_kinerja_guru"/>
+        </record>
+
+        <record id="group_admin_kinerja_guru" model="res.groups">
+            <field name="name">Admin Data Penilaian Kinerja Guru</field>
+            <field name="category_id" ref="category_admin_kinerja_guru"/>
+            <field name="implied_ids" eval="[(4, ref('group_kinerja_guru') )]" />
+        </record>
+
+        <record id="group_kepala_sekolah" model="res.groups">
+            <field name="name">Access Penilaian Kepala Sekolah</field>
+            <!-- <field name="category_id" ref="category_admin_kinerja_guru"/> -->
+            <field name="implied_ids" eval="[(4, ref('base.group_user') )]" />
+        </record>
+
+        <record id="group_teman_sejawat" model="res.groups">
+            <field name="name">Access Penilaian Teman Sejawat</field>
+            <!-- <field name="category_id" ref="category_admin_kinerja_guru"/> -->
+            <field name="implied_ids" eval="[(4, ref('base.group_user') )]" />
+        </record>
+
+        <record id="group_wali_murit" model="res.groups">
+            <field name="name">Access Penilaian Wali Murit</field>
+            <!-- <field name="category_id" ref="category_admin_kinerja_guru"/> -->
+            <field name="implied_ids" eval="[(4, ref('base.group_user') )]" />
+        </record>
+
+        <record id="group_peserta_didik" model="res.groups">
+            <field name="name">Access Penilaian Peserta Didik</field>
+            <!-- <field name="category_id" ref="category_admin_kinerja_guru"/> -->
+            <field name="implied_ids" eval="[(4, ref('base.group_user') )]" />
+        </record>
+        
+    </data>
+    
+</odoo>

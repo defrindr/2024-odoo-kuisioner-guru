@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="1">
+        <record id="action_report_data_guru" model="ir.actions.report">
+            <field name="name">Report Data Guru</field>
+            <field name="model">data.guru</field>
+            <field name="report_type">qweb-html</field>
+            <field name="report_name">sistem_pengelolaan_data_guru_dan_absensi.report_data_guru</field>
+            <field name="report_file">sistem_pengelolaan_data_guru_dan_absensi.report_data_guru</field>
+            <field name="binding_model_id" ref="sistem_pengelolaan_data_guru_dan_absensi.model_data_guru"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <template id="report_data_guru">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <table class="tg" style="undefined;table-layout: fixed; width: 100%">
+                                 <tr> 
+                                  <th colspan="15"><h3 align="center"><b>Biodata Guru</b></h3></th> 
+                                </tr> 
+                                <tr> 
+                                  <th colspan="4"><h5>Nama Guru</h5></th> 
+                                  <th>:</th>
+                                  <th colspan="6"><span t-field="o.name"/></th> 
+                                  <th colspan="4"></th>
+                                </tr> 
+                                  <tr> 
+                                  <th colspan="4"><h5>Nip</h5></th> 
+                                  <th>:</th>
+                                  <th colspan="6"><span t-field="o.nip"/></th> 
+                                  <th colspan="4"></th>
+                                 </tr> 
+                                  <tr> 
+                                  <th colspan="4"><h5>Tempat/Tanggal Lahir</h5></th>
+                                  <th>:</th> 
+                                  <th colspan="6"><span t-field="o.tempat_lahir"/>,<span t-field="o.tgl_lahir"/></th> 
+                                  <th colspan="4"></th>
+                                 </tr> 
+                                 <tr t-if="o.status_kepegawaian!='ths'">
+                                    <th colspan="4"><h5>Pangkat/Golongan</h5></th>
+                                    <th>:</th> 
+                                    <th colspan="6"><span t-field="o.pangkat_golongan"/></th> 
+                                    <th colspan="4"></th>
+                                 </tr>
+                                <tr> 
+                                  <th colspan="4"><h5>Jenis Kelamin</h5></th> 
+                                  <th>:</th>
+                                  <th colspan="6"><span t-field="o.jenis_kelamin"/></th> 
+                                  <th colspan="4"></th>
+                                </tr> 
+                                <!-- <tr> 
+                                  <th colspan="4"><h5>Tanggal Lahir</h5></th>
+                                  <th>:</th> 
+                                  <th colspan="6"><span t-field="o.tgl_lahir"/></th> 
+                                  <th colspan="4"></th>
+                                 </tr>  -->
+                                <tr> 
+                                  <th colspan="4"><h5>Nuptk</h5></th> 
+                                  <th>:</th>
+                                  <th colspan="6"><span t-field="o.nuptk"/></th> 
+                                  <th colspan="4"></th>
+                                </tr> 
+                                 <tr> 
+                                    <th colspan="4"><h5>Status Kepegawaian</h5></th> 
+                                    <th>:</th>
+                                    <th colspan="6"><span t-field="o.status_kepegawaian"/></th> 
+                                    <th colspan="4"></th>
+                                 </tr> 
+                                  <tr> 
+                                    <th colspan="4"><h5>Jenis PTK</h5></th> 
+                                    <th>:</th>
+                                    <th colspan="6"><span t-field="o.jenis_ptk"/></th> 
+                                    <th colspan="4"></th>
+                                 </tr>
+                                  <tr> 
+                                    <th colspan="4"><h5>Agama</h5></th> 
+                                    <th>:</th>
+                                    <th colspan="6"><span t-field="o.agama"/></th> 
+                                    <th colspan="4"></th>
+                                 </tr>
+                                  <tr> 
+                                    <th colspan="4"><h5>No Telefon</h5></th> 
+                                    <th>:</th>
+                                    <th colspan="6"><span t-field="o.telefon"/></th> 
+                                    <th colspan="4"></th>
+                                 </tr>
+                                      <tr> 
+                                    <th colspan="4"><h5>E-mail</h5></th> 
+                                    <th>:</th>
+                                    <th colspan="6"><span t-field="o.email"/></th> 
+                                    <th colspan="4"></th>
+                                 </tr>
+                                      <tr> 
+                                    <th colspan="4"><h5>Status Kepegawaian</h5></th> 
+                                    <th>:</th>
+                                    <th colspan="6"><span t-field="o.status_kepegawaian"/></th> 
+                                    <th colspan="4"></th>
+                                 </tr>
+                                 <tr>
+                                    <th colspan="4"><h5>Foto Guru</h5></th> 
+                                    <th>:</th>
+                                    <th class="" style="" colspan="10" ><img t-att-src="'data:image/*;base64,%s' % to_text(o.foto)" height="75px" border="0" width="90px"/></th>
+                                </tr>
+                            </table>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>
+
+
+

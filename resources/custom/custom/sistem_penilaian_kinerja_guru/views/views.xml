@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="sistem_penilaian_kinerja_guru.list">
+      <field name="name">sistem_penilaian_kinerja_guru list</field>
+      <field name="model">sistem_penilaian_kinerja_guru.sistem_penilaian_kinerja_guru</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="sistem_penilaian_kinerja_guru.action_window">
+      <field name="name">sistem_penilaian_kinerja_guru window</field>
+      <field name="res_model">sistem_penilaian_kinerja_guru.sistem_penilaian_kinerja_guru</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="sistem_penilaian_kinerja_guru.action_server">
+      <field name="name">sistem_penilaian_kinerja_guru server</field>
+      <field name="model_id" ref="model_sistem_penilaian_kinerja_guru_sistem_penilaian_kinerja_guru"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="sistem_penilaian_kinerja_guru" id="sistem_penilaian_kinerja_guru.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="sistem_penilaian_kinerja_guru.menu_1" parent="sistem_penilaian_kinerja_guru.menu_root"/>
+    <menuitem name="Menu 2" id="sistem_penilaian_kinerja_guru.menu_2" parent="sistem_penilaian_kinerja_guru.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="sistem_penilaian_kinerja_guru.menu_1_list" parent="sistem_penilaian_kinerja_guru.menu_1"
+              action="sistem_penilaian_kinerja_guru.action_window"/>
+    <menuitem name="Server to list" id="sistem_penilaian_kinerja_guru" parent="sistem_penilaian_kinerja_guru.menu_2"
+              action="sistem_penilaian_kinerja_guru.action_server"/>
+    -->
+  </data>
+</odoo>

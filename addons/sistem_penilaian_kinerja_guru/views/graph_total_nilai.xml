@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="1">
+        <record id="nilai_total_view_graph" model="ir.ui.view">
+            <field name="name">nilai.total.view.graph</field>
+            <field name="model">nilai.total</field>
+            <field name="arch" type="xml">
+                <graph string="" type="bar">
+                    <field name="data_guru_id" />
+                    <field name="name" />
+                    <field name="total_nilai" type="measure" />
+                </graph>
+            </field>
+        </record>
+
+        <record id="nilai_total_graph_action" model="ir.actions.act_window">
+            <field name="name">Graph Hasil Penilaian Kinerja Guru</field>
+            <field name="res_model">nilai.total</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">graph</field>
+        </record>
+
+        <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+        <menuitem 
+            id="penilaian_kinerja_guru_menu_root" 
+            name="Sistem Penilaian Kinerja Guru" 
+            web_icon="sistem_penilaian_kinerja_guru,static/description/icon.png"
+            sequence="2"/>
+
+       <!-- This Menu Item must have a parent and an action -->
+        <menuitem 
+            id="graph_nilai_total_menu_act" 
+            name="Graph Nilai Total" 
+            parent="penilaian_kinerja_guru_menu_root" 
+            action="nilai_total_graph_action" 
+            sequence="60"/>
+    </data>
+</odoo>

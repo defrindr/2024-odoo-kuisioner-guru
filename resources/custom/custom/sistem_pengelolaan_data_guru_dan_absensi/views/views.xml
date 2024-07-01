@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="sistem_pengelolaan_data_guru_dan_absensi.list">
+      <field name="name">sistem_pengelolaan_data_guru_dan_absensi list</field>
+      <field name="model">sistem_pengelolaan_data_guru_dan_absensi.sistem_pengelolaan_data_guru_dan_absensi</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="sistem_pengelolaan_data_guru_dan_absensi.action_window">
+      <field name="name">sistem_pengelolaan_data_guru_dan_absensi window</field>
+      <field name="res_model">sistem_pengelolaan_data_guru_dan_absensi.sistem_pengelolaan_data_guru_dan_absensi</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="sistem_pengelolaan_data_guru_dan_absensi.action_server">
+      <field name="name">sistem_pengelolaan_data_guru_dan_absensi server</field>
+      <field name="model_id" ref="model_sistem_pengelolaan_data_guru_dan_absensi_sistem_pengelolaan_data_guru_dan_absensi"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="sistem_pengelolaan_data_guru_dan_absensi" id="sistem_pengelolaan_data_guru_dan_absensi.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="sistem_pengelolaan_data_guru_dan_absensi.menu_1" parent="sistem_pengelolaan_data_guru_dan_absensi.menu_root"/>
+    <menuitem name="Menu 2" id="sistem_pengelolaan_data_guru_dan_absensi.menu_2" parent="sistem_pengelolaan_data_guru_dan_absensi.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="sistem_pengelolaan_data_guru_dan_absensi.menu_1_list" parent="sistem_pengelolaan_data_guru_dan_absensi.menu_1"
+              action="sistem_pengelolaan_data_guru_dan_absensi.action_window"/>
+    <menuitem name="Server to list" id="sistem_pengelolaan_data_guru_dan_absensi" parent="sistem_pengelolaan_data_guru_dan_absensi.menu_2"
+              action="sistem_pengelolaan_data_guru_dan_absensi.action_server"/>
+-->
+  </data>
+</odoo>

@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_all_data_guru,all_data_guru,model_data_guru,group_admin,1,1,1,1
+access_all_absensi_kehadiran,all_absensi_kehadiran,model_absensi_kehadiran,group_admin,1,1,1,1
+
+read_only_data_guru,read_only_data_guru,model_data_guru,group_guru,1,0,0,0
+read_only_absensi_kehadiran,read_only_absensi_kehadiran,model_absensi_kehadiran,group_guru,1,0,0,0
