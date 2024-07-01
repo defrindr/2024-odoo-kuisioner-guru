@@ -53,6 +53,12 @@ class DataGuru(models.Model):
     
     foto = fields.Binary(string='Foto Guru')
 
+    
+    # Menambahkan SQL constraint
+    _sql_constraints = [
+        ('unique_nik', 'UNIQUE(nik)', 'Data guru ini telah tersedia!')
+    ]
+
     @api.depends('status_kepegawaian')
     def _compute_pns(self):
         for rec in self:
