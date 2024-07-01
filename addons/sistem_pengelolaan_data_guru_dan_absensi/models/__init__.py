@@ -2,4 +2,5 @@
 
 from . import models
 from . import data_guru
+from . import data_import_guru_wizard
 from . import data_absensi_kehadiran

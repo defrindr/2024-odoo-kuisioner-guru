@@ -25,10 +25,11 @@
     'data': [
         'security/res_groups.xml',
         'security/ir.model.access.csv',
+        'views/import_guru_wizard_views.xml',
         'views/data_guru_views.xml',
         'views/absensi_kehadiran_views.xml',
-        'views/views.xml',
-        'views/templates.xml',
+        # 'views/views.xml',
+        # 'views/templates.xml',
         'reports/report_data_guru.xml',
     ],
     # only loaded in demonstration mode
