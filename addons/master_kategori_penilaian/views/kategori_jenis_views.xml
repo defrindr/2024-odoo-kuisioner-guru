@@ -6,9 +6,11 @@
         <field name="arch" type="xml">
             <form create="false">
                 <sheet>
+                    <field name="group_id" invisible="1" />
                     <field name="jenis" readonly="1" />
-                    <field name="keterangan_ids">
+                    <field name="keterangan_ids" >
                         <tree editable="bottom">
+                            <field name="group_id" invisible="1"/>
                             <field name="keterangan" />
                         </tree>
                     </field>

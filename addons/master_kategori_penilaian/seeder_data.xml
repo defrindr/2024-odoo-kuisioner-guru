@@ -1,423 +1,496 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    
     <record id="kategori_group_1" model="kategori.group">
         <field name="kategori">kepala_sekolah</field>
         <field name="name">Form Penilaian Kepala Sekolah</field>
     </record>
 
-        <record id="kategori_jenis_1_1" model="kategori.jenis">
-            <field name="jenis">Mengenal Karakteristik Peserta Didik</field>
-            <field name="group_id" ref="kategori_group_1"/>
-        </record>
+    <record id="kategori_jenis_1_1" model="kategori.jenis">
+        <field name="jenis">Mengenal Karakteristik Peserta Didik</field>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_1_1" model="kategori.keterangan">
-                <field name="keterangan">Guru dapat khusus tentang peserta didik (perihal kelebihan, kekurangan, kelemahan, kecenderungan perilaku mengganggu) yang perlu memperoleh perhatian guru..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_1"/>
-            </record>
+    <record id="kategori_keterangan_1_1_1" model="kategori.keterangan">
+        <field name="keterangan">Guru dapat khusus tentang peserta didik (perihal kelebihan, kekurangan, kelemahan, kecenderungan perilaku mengganggu) yang perlu memperoleh perhatian guru..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_1"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_1_2" model="kategori.keterangan">
-                <field name="keterangan">Guru dapat Mencatat kemajuan dan perkembangan peserta didik..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_1"/>
-            </record>
+    <record id="kategori_keterangan_1_1_2" model="kategori.keterangan">
+        <field name="keterangan">Guru dapat Mencatat kemajuan dan perkembangan peserta didik..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_1"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_1_3" model="kategori.keterangan">
-                <field name="keterangan">Guru dapat menjelaskan kemampuan belajar empat peserta didik yang ditunjuk secara acak..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_1"/>
-            </record>
+    <record id="kategori_keterangan_1_1_3" model="kategori.keterangan">
+        <field name="keterangan">Guru dapat menjelaskan kemampuan belajar empat peserta didik yang ditunjuk secara acak..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_1"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_1_4" model="kategori.keterangan">
-                <field name="keterangan">Guru mengecek kahadiran siswa dan Memberi motivasi kepada peserta didik..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_1"/>
-            </record>
+    <record id="kategori_keterangan_1_1_4" model="kategori.keterangan">
+        <field name="keterangan">Guru mengecek kahadiran siswa dan Memberi motivasi kepada peserta didik..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_1"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_1_5" model="kategori.keterangan">
-                <field name="keterangan">Guru dapat menyebutkan peserta didik yang paling pandai/lemah di kelasnya..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_1"/>
-            </record>
+    <record id="kategori_keterangan_1_1_5" model="kategori.keterangan">
+        <field name="keterangan">Guru dapat menyebutkan peserta didik yang paling pandai/lemah di kelasnya..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_1"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_1_6" model="kategori.keterangan">
-                <field name="keterangan">Guru dapat menjelaskan langkah-langkah (yang sifatnya pedagogis) dalam merancang pembelajaran untuk peserta didik yang beragam..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_1"/>
-            </record>
+    <record id="kategori_keterangan_1_1_6" model="kategori.keterangan">
+        <field name="keterangan">Guru dapat menjelaskan langkah-langkah (yang sifatnya pedagogis) dalam merancang pembelajaran untuk peserta didik yang beragam..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_1"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_1_7" model="kategori.keterangan">
-                <field name="keterangan">Guru dapat memberi klasifikasi umum kemampuan belajar peserta didik di kelasnya (berdasarkan potensi kecerdasannya)..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_1"/>
-            </record>
+    <record id="kategori_keterangan_1_1_7" model="kategori.keterangan">
+        <field name="keterangan">Guru dapat memberi klasifikasi umum kemampuan belajar peserta didik di kelasnya (berdasarkan potensi kecerdasannya)..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_1"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_1_8" model="kategori.keterangan">
-                <field name="keterangan">Guru mempergunakan alat/media yang tepat sehingga semua peserta didik dapat mengikuti kegiatan pembelajaran secara optimal..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_1"/>
-            </record>
+    <record id="kategori_keterangan_1_1_8" model="kategori.keterangan">
+        <field name="keterangan">Guru mempergunakan alat/media yang tepat sehingga semua peserta didik dapat mengikuti kegiatan pembelajaran secara optimal..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_1"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-        <record id="kategori_jenis_1_2" model="kategori.jenis">
-            <field name="jenis">Penguasaan Teori dan prinsip Pembelajaran yg mendidik</field>
-            <field name="group_id" ref="kategori_group_1"/>
-        </record>
+    <record id="kategori_jenis_1_2" model="kategori.jenis">
+        <field name="jenis">Penguasaan Teori dan prinsip Pembelajaran yg mendidik</field>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_2_1" model="kategori.keterangan">
-                <field name="keterangan">Guru dapat mengajukan pertanyaan-pertanyaan yang mengaitkan pengetahuan sebelumnya dengan materi yang akan dipelajari..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_2"/>
-            </record>
+    <record id="kategori_keterangan_1_2_1" model="kategori.keterangan">
+        <field name="keterangan">Guru dapat mengajukan pertanyaan-pertanyaan yang mengaitkan pengetahuan sebelumnya dengan materi yang akan dipelajari..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_2"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_2_2" model="kategori.keterangan">
-                <field name="keterangan">Guru dapat menyampaikan kompetensi yang akan dicapai dalam kegiatan pembelajaran..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_2"/>
-            </record>
+    <record id="kategori_keterangan_1_2_2" model="kategori.keterangan">
+        <field name="keterangan">Guru dapat menyampaikan kompetensi yang akan dicapai dalam kegiatan pembelajaran..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_2"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_2_3" model="kategori.keterangan">
-                <field name="keterangan">Guru dapat mengimplementasikan metode/teknik pembelajaran yang bervariasi untuk memberi kesempatan peserta didik menguasai materi sesuai kemampuan masing-masing..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_2"/>
-            </record>
+    <record id="kategori_keterangan_1_2_3" model="kategori.keterangan">
+        <field name="keterangan">Guru dapat mengimplementasikan metode/teknik pembelajaran yang bervariasi untuk memberi kesempatan peserta didik menguasai materi sesuai kemampuan masing-masing..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_2"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_2_4" model="kategori.keterangan">
-                <field name="keterangan">Guru dapat memberi kesempatan peserta didik untuk bertanya, berdiskusi/sharing dengan teman-temannya agar penguasai materi pembelajaran lebih merata..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_2"/>
-            </record>
+    <record id="kategori_keterangan_1_2_4" model="kategori.keterangan">
+        <field name="keterangan">Guru dapat memberi kesempatan peserta didik untuk bertanya, berdiskusi/sharing dengan teman-temannya agar penguasai materi pembelajaran lebih merata..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_2"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_2_5" model="kategori.keterangan">
-                <field name="keterangan">Guru dapat menjelaskan langkah-langkah penentuan KKM denngan mempertimbangkan kemampuan rata-rata peserta didik..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_2"/>
-            </record>
+    <record id="kategori_keterangan_1_2_5" model="kategori.keterangan">
+        <field name="keterangan">Guru dapat menjelaskan langkah-langkah penentuan KKM denngan mempertimbangkan kemampuan rata-rata peserta didik..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_2"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_2_6" model="kategori.keterangan">
-                <field name="keterangan">Guru tanggap apabila ada tanda-tanda peserta didik tertentu kurang atau belam memahami materi pembelajaran..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_2"/>
-            </record>
+    <record id="kategori_keterangan_1_2_6" model="kategori.keterangan">
+        <field name="keterangan">Guru tanggap apabila ada tanda-tanda peserta didik tertentu kurang atau belam memahami materi pembelajaran..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_2"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_2_7" model="kategori.keterangan">
-                <field name="keterangan">Guru mencatat hal-hal penting terkait dengan problem pembelajaran untuk ditindaklanjuti dan/atau diperbaiki pada rencana pembelajaran selanjutnya..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_2"/>
-            </record>
+    <record id="kategori_keterangan_1_2_7" model="kategori.keterangan">
+        <field name="keterangan">Guru mencatat hal-hal penting terkait dengan problem pembelajaran untuk ditindaklanjuti dan/atau diperbaiki pada rencana pembelajaran selanjutnya..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_2"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_2_8" model="kategori.keterangan">
-                <field name="keterangan">Guru dapat menjelaskan kaitan rasional antara materi ajar, tujuan pembelajaran, indikator pencapaian kompetensi, kompetensi dasar dan standar kompetensi..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_2"/>
-            </record>
+    <record id="kategori_keterangan_1_2_8" model="kategori.keterangan">
+        <field name="keterangan">Guru dapat menjelaskan kaitan rasional antara materi ajar, tujuan pembelajaran, indikator pencapaian kompetensi, kompetensi dasar dan standar kompetensi..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_2"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-        <record id="kategori_jenis_1_3" model="kategori.jenis">
-            <field name="jenis">Pengembangan Kurikulum</field>
-            <field name="group_id" ref="kategori_group_1"/>
-        </record>
+    <record id="kategori_jenis_1_3" model="kategori.jenis">
+        <field name="jenis">Pengembangan Kurikulum</field>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_3_1" model="kategori.keterangan">
-                <field name="keterangan">Materi pembelajaran dirancang bisa dilaksanakan di kelas atau di luar kelas (seperti lab, bengkel dan sebagainya)..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_3"/>
-            </record>
+    <record id="kategori_keterangan_1_3_1" model="kategori.keterangan">
+        <field name="keterangan">Materi pembelajaran dirancang bisa dilaksanakan di kelas atau di luar kelas (seperti lab, bengkel dan sebagainya)..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_3"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_3_2" model="kategori.keterangan">
-                <field name="keterangan">Guru menyajikan materi pembelajaran secara runtut dan logis..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_3"/>
-            </record>
+    <record id="kategori_keterangan_1_3_2" model="kategori.keterangan">
+        <field name="keterangan">Guru menyajikan materi pembelajaran secara runtut dan logis..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_3"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_3_3" model="kategori.keterangan">
-                <field name="keterangan">Guru membiasakan peserta didik menggunakan buku-buku dan sumber belajar yang lain di perpustakaan..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_3"/>
-            </record>
+    <record id="kategori_keterangan_1_3_3" model="kategori.keterangan">
+        <field name="keterangan">Guru membiasakan peserta didik menggunakan buku-buku dan sumber belajar yang lain di perpustakaan..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_3"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_3_4" model="kategori.keterangan">
-                <field name="keterangan">Guru mempergunakan buku ajar yang telah ditetapkan oleh Menteri..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_3"/>
-            </record>
+    <record id="kategori_keterangan_1_3_4" model="kategori.keterangan">
+        <field name="keterangan">Guru mempergunakan buku ajar yang telah ditetapkan oleh Menteri..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_3"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_3_5" model="kategori.keterangan">
-                <field name="keterangan">Materi pembelajaran dikembangkan sesuai herarki dan struktur keilmuannya..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_3"/>
-            </record>
+    <record id="kategori_keterangan_1_3_5" model="kategori.keterangan">
+        <field name="keterangan">Materi pembelajaran dikembangkan sesuai herarki dan struktur keilmuannya..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_3"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_3_6" model="kategori.keterangan">
-                <field name="keterangan">Materi pembelajaran dikembangkan mendukung tercapainya kompetensi lulusan..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_3"/>
-            </record>
+    <record id="kategori_keterangan_1_3_6" model="kategori.keterangan">
+        <field name="keterangan">Materi pembelajaran dikembangkan mendukung tercapainya kompetensi lulusan..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_3"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_3_7" model="kategori.keterangan">
-                <field name="keterangan">Guru menyajikan materi pembelajaran sesuai kompetensi yang hendak dicapai..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_3"/>
-            </record>
+    <record id="kategori_keterangan_1_3_7" model="kategori.keterangan">
+        <field name="keterangan">Guru menyajikan materi pembelajaran sesuai kompetensi yang hendak dicapai..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_3"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_3_8" model="kategori.keterangan">
-                <field name="keterangan">Guru menjelaskan bagaimana silabus itu disusun berdasarkan hasil analisis SK-KD..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_3"/>
-            </record>
+    <record id="kategori_keterangan_1_3_8" model="kategori.keterangan">
+        <field name="keterangan">Guru menjelaskan bagaimana silabus itu disusun berdasarkan hasil analisis SK-KD..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_3"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_3_9" model="kategori.keterangan">
-                <field name="keterangan">Guru menjelaskan bagaimana menyusun RPP sesuai silabus..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_3"/>
-            </record>
+    <record id="kategori_keterangan_1_3_9" model="kategori.keterangan">
+        <field name="keterangan">Guru menjelaskan bagaimana menyusun RPP sesuai silabus..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_3"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_3_10" model="kategori.keterangan">
-                <field name="keterangan">Guru mengaitkan materi pelajaran dengan kehidupan sehari-hari..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_3"/>
-            </record>
+    <record id="kategori_keterangan_1_3_10" model="kategori.keterangan">
+        <field name="keterangan">Guru mengaitkan materi pelajaran dengan kehidupan sehari-hari..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_3"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-        <record id="kategori_jenis_1_4" model="kategori.jenis">
-            <field name="jenis">Guru bertindak sesuai norma,agama,hukum,sosial dan kebudayaan nasional</field>
-            <field name="group_id" ref="kategori_group_1"/>
-        </record>
+    <record id="kategori_jenis_1_4" model="kategori.jenis">
+        <field name="jenis">Guru bertindak sesuai norma,agama,hukum,sosial dan kebudayaan nasional</field>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_4_1" model="kategori.keterangan">
-                <field name="keterangan">Guru menerapkan prinsip-prinsip Pancasila sebagai dasar ideologi bermasyarakat dan berbangsa..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_4"/>
-            </record>
+    <record id="kategori_keterangan_1_4_1" model="kategori.keterangan">
+        <field name="keterangan">Guru menerapkan prinsip-prinsip Pancasila sebagai dasar ideologi bermasyarakat dan berbangsa..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_4"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_4_2" model="kategori.keterangan">
-                <field name="keterangan">Guru beretika sesuai karakter dan budaya bangsa..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_4"/>
-            </record>
+    <record id="kategori_keterangan_1_4_2" model="kategori.keterangan">
+        <field name="keterangan">Guru beretika sesuai karakter dan budaya bangsa..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_4"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_4_3" model="kategori.keterangan">
-                <field name="keterangan">Bekerja sama dengan teman sejawat secara wajar tanpa membedakan suku, agama, ras, golongan dan gender..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_4"/>
-            </record>
+    <record id="kategori_keterangan_1_4_3" model="kategori.keterangan">
+        <field name="keterangan">Bekerja sama dengan teman sejawat secara wajar tanpa membedakan suku, agama, ras, golongan dan gender..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_4"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_4_4" model="kategori.keterangan">
-                <field name="keterangan">Berkolaborasi aktif dan dinamik (berat sama dipikul ringan sama dijinjing) dalam menyelesaikan tugas dan/atau permasalahan sekolah..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_4"/>
-            </record>
+    <record id="kategori_keterangan_1_4_4" model="kategori.keterangan">
+        <field name="keterangan">Berkolaborasi aktif dan dinamik (berat sama dipikul ringan sama dijinjing) dalam menyelesaikan tugas dan/atau permasalahan sekolah..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_4"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_4_5" model="kategori.keterangan">
-                <field name="keterangan">Menerima dan menghormati keberagaman dan perbedaan-perbedaan sebagai hal wajar..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_4"/>
-            </record>
+    <record id="kategori_keterangan_1_4_5" model="kategori.keterangan">
+        <field name="keterangan">Menerima dan menghormati keberagaman dan perbedaan-perbedaan sebagai hal wajar..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_4"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_4_6" model="kategori.keterangan">
-                <field name="keterangan">Menghargai pendapat orang lain (baik sejawat, orangtua/wali, siswa atau yang lain-lain)..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_4"/>
-            </record>
+    <record id="kategori_keterangan_1_4_6" model="kategori.keterangan">
+        <field name="keterangan">Menghargai pendapat orang lain (baik sejawat, orangtua/wali, siswa atau yang lain-lain)..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_4"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_4_7" model="kategori.keterangan">
-                <field name="keterangan">Aktif terlibat dalam berbagai kapanitiaan/kepengurusan sekolah atau yang lebih tinggi di bidang pendidikan (seperti Pramuka, OSN, Paskribra, Dharmawanita dan lain-lain)..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_4"/>
-            </record>
+    <record id="kategori_keterangan_1_4_7" model="kategori.keterangan">
+        <field name="keterangan">Aktif terlibat dalam berbagai kapanitiaan/kepengurusan sekolah atau yang lebih tinggi di bidang pendidikan (seperti Pramuka, OSN, Paskribra, Dharmawanita dan lain-lain)..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_4"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_4_8" model="kategori.keterangan">
-                <field name="keterangan">Guru menjelaskan bagaimana pandangannya tentang perbedaan-perbedaan yang ada dalam masyarakat, baik karena perbedaan latar belakang budaya, suku atau agama..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_4"/>
-            </record>
+    <record id="kategori_keterangan_1_4_8" model="kategori.keterangan">
+        <field name="keterangan">Guru menjelaskan bagaimana pandangannya tentang perbedaan-perbedaan yang ada dalam masyarakat, baik karena perbedaan latar belakang budaya, suku atau agama..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_4"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-        <record id="kategori_jenis_1_5" model="kategori.jenis">
-            <field name="jenis">Guru Menunjukkan pribadi dewasa dan teladan</field>
-            <field name="group_id" ref="kategori_group_1"/>
-        </record>
+    <record id="kategori_jenis_1_5" model="kategori.jenis">
+        <field name="jenis">Guru Menunjukkan pribadi dewasa dan teladan</field>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_5_1" model="kategori.keterangan">
-                <field name="keterangan">Guru berbicara dengan pilihan kata dan ungkapan yang tepat dan mendidik sesuai perkembangan dan usia peserta didik..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_5"/>
-            </record>
+    <record id="kategori_keterangan_1_5_1" model="kategori.keterangan">
+        <field name="keterangan">Guru berbicara dengan pilihan kata dan ungkapan yang tepat dan mendidik sesuai perkembangan dan usia peserta didik..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_5"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_5_2" model="kategori.keterangan">
-                <field name="keterangan">Guru berpakaian rapi dan sopan sesuai kelayakan budaya, norma hukum dan keyakinan beragama..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_5"/>
-            </record>
+    <record id="kategori_keterangan_1_5_2" model="kategori.keterangan">
+        <field name="keterangan">Guru berpakaian rapi dan sopan sesuai kelayakan budaya, norma hukum dan keyakinan beragama..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_5"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_5_3" model="kategori.keterangan">
-                <field name="keterangan">Guru berperilaku terpuji sesuai tata krama yang berlaku dan keyakinan beragama..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_5"/>
-            </record>
+    <record id="kategori_keterangan_1_5_3" model="kategori.keterangan">
+        <field name="keterangan">Guru berperilaku terpuji sesuai tata krama yang berlaku dan keyakinan beragama..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_5"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_5_4" model="kategori.keterangan">
-                <field name="keterangan">Guru tidak melakukan hal-hal yang terindikasi melanggar norma, baik norma hukum, budaya atau agama..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_5"/>
-            </record>
+    <record id="kategori_keterangan_1_5_4" model="kategori.keterangan">
+        <field name="keterangan">Guru tidak melakukan hal-hal yang terindikasi melanggar norma, baik norma hukum, budaya atau agama..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_5"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_5_5" model="kategori.keterangan">
-                <field name="keterangan">Guru suka berbuat kebaikan untuk sesama, misalnya pada sejawat, orangtua/wali, peserta didik dan lain-lain..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_5"/>
-            </record>
+    <record id="kategori_keterangan_1_5_5" model="kategori.keterangan">
+        <field name="keterangan">Guru suka berbuat kebaikan untuk sesama, misalnya pada sejawat, orangtua/wali, peserta didik dan lain-lain..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_5"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_5_6" model="kategori.keterangan">
-                <field name="keterangan">Guru suka berbagai pengalaman dan informasi dengan teman sejawat (misalnya dalam rangka pengembangan keprofesian berkelanjutan)..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_5"/>
-            </record>
+    <record id="kategori_keterangan_1_5_6" model="kategori.keterangan">
+        <field name="keterangan">Guru suka berbagai pengalaman dan informasi dengan teman sejawat (misalnya dalam rangka pengembangan keprofesian berkelanjutan)..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_5"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_5_7" model="kategori.keterangan">
-                <field name="keterangan">Guru menerima masukan (umpan balik) dari peserta didik terkait kegiatan pembelajaran (terutama dalam hal pemilihan strategi, metode/teknik dan gaya mengajar)..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_5"/>
-            </record>
+    <record id="kategori_keterangan_1_5_7" model="kategori.keterangan">
+        <field name="keterangan">Guru menerima masukan (umpan balik) dari peserta didik terkait kegiatan pembelajaran (terutama dalam hal pemilihan strategi, metode/teknik dan gaya mengajar)..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_5"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_5_8" model="kategori.keterangan">
-                <field name="keterangan">Guru menjaga citra dan nama baik sekolah (dan lebih utama apabila dapat mengharumkan nama sekolah dengan kreatifitas dan prestasi yang dicapainya)..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_5"/>
-            </record>
+    <record id="kategori_keterangan_1_5_8" model="kategori.keterangan">
+        <field name="keterangan">Guru menjaga citra dan nama baik sekolah (dan lebih utama apabila dapat mengharumkan nama sekolah dengan kreatifitas dan prestasi yang dicapainya)..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_5"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_5_9" model="kategori.keterangan">
-                <field name="keterangan">Guru menerima dan melaksanakan tugas-tugas keluar mewakili sekolah, seperti mengikuti upacara bendera, mengikuti lomba guru dan lainsebagainya..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_5"/>
-            </record>
+    <record id="kategori_keterangan_1_5_9" model="kategori.keterangan">
+        <field name="keterangan">Guru menerima dan melaksanakan tugas-tugas keluar mewakili sekolah, seperti mengikuti upacara bendera, mengikuti lomba guru dan lainsebagainya..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_5"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
-            <record id="kategori_keterangan_1_5_10" model="kategori.keterangan">
-                <field name="keterangan">Guru melaksanakan tugas-tugas di luar sekolah sekolah, seperti diklat, menjadi nara sumber, mengikuti lomba antar guru atau yang lain-lain berdasarkan surat tugas atau ijin Kepala Sekolah..</field>
-                <field name="jenis_id" ref="kategori_jenis_1_5"/>
-            </record>
+    <record id="kategori_keterangan_1_5_10" model="kategori.keterangan">
+        <field name="keterangan">Guru melaksanakan tugas-tugas di luar sekolah sekolah, seperti diklat, menjadi nara sumber, mengikuti lomba antar guru atau yang lain-lain berdasarkan surat tugas atau ijin Kepala Sekolah..</field>
+        <field name="jenis_id" ref="kategori_jenis_1_5"/>
+        <field name="group_id" ref="kategori_group_1"/>
+    </record>
 
     <record id="kategori_group_2" model="kategori.group">
         <field name="kategori">teman_sejawat</field>
         <field name="name">Form Penilaian Teman Sejawat</field>
     </record>
 
-        <record id="kategori_jenis_2_1" model="kategori.jenis">
-            <field name="jenis">Perilaku Guru Sehari-hari</field>
-            <field name="group_id" ref="kategori_group_2"/>
-        </record>
+    <record id="kategori_jenis_2_1" model="kategori.jenis">
+        <field name="jenis">Perilaku Guru Sehari-hari</field>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_1_1" model="kategori.keterangan">
-                <field name="keterangan">Guru mentaati peraturan yang berlaku di sekolah..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_1"/>
-            </record>
+    <record id="kategori_keterangan_2_1_1" model="kategori.keterangan">
+        <field name="keterangan">Guru mentaati peraturan yang berlaku di sekolah..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_1"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_1_2" model="kategori.keterangan">
-                <field name="keterangan">Guru bekerja sesuai jadwal yang ditetapkan..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_1"/>
-            </record>
+    <record id="kategori_keterangan_2_1_2" model="kategori.keterangan">
+        <field name="keterangan">Guru bekerja sesuai jadwal yang ditetapkan..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_1"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_1_3" model="kategori.keterangan">
-                <field name="keterangan">Guru berpakaian rapi dan/atau sopan..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_1"/>
-            </record>
+    <record id="kategori_keterangan_2_1_3" model="kategori.keterangan">
+        <field name="keterangan">Guru berpakaian rapi dan/atau sopan..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_1"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_1_4" model="kategori.keterangan">
-                <field name="keterangan">Guru rajin mengikuti upacara bendera..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_1"/>
-            </record>
+    <record id="kategori_keterangan_2_1_4" model="kategori.keterangan">
+        <field name="keterangan">Guru rajin mengikuti upacara bendera..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_1"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_1_5" model="kategori.keterangan">
-                <field name="keterangan">Guru berprilaku baik terhadap saya dan guru lain..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_1"/>
-            </record>
+    <record id="kategori_keterangan_2_1_5" model="kategori.keterangan">
+        <field name="keterangan">Guru berprilaku baik terhadap saya dan guru lain..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_1"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_1_6" model="kategori.keterangan">
-                <field name="keterangan">Guru bersedia menerima kritik dan saran dari saya atau guru lain..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_1"/>
-            </record>
+    <record id="kategori_keterangan_2_1_6" model="kategori.keterangan">
+        <field name="keterangan">Guru bersedia menerima kritik dan saran dari saya atau guru lain..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_1"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_1_7" model="kategori.keterangan">
-                <field name="keterangan">Guru dapat menjadi teladan bagi saya dan teman-teman..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_1"/>
-            </record>
+    <record id="kategori_keterangan_2_1_7" model="kategori.keterangan">
+        <field name="keterangan">Guru dapat menjadi teladan bagi saya dan teman-teman..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_1"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_1_8" model="kategori.keterangan">
-                <field name="keterangan">Guru pandai mengendalikan diri..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_1"/>
-            </record>
+    <record id="kategori_keterangan_2_1_8" model="kategori.keterangan">
+        <field name="keterangan">Guru pandai mengendalikan diri..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_1"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_1_9" model="kategori.keterangan">
-                <field name="keterangan">Guru ikut aktif menjaga lingkungan sekolah bebas dari asap rokok..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_1"/>
-            </record>
+    <record id="kategori_keterangan_2_1_9" model="kategori.keterangan">
+        <field name="keterangan">Guru ikut aktif menjaga lingkungan sekolah bebas dari asap rokok..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_1"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_1_10" model="kategori.keterangan">
-                <field name="keterangan">Guru berpartisipasi aktif dalam kegiatan ekstrakurikuler..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_1"/>
-            </record>
+    <record id="kategori_keterangan_2_1_10" model="kategori.keterangan">
+        <field name="keterangan">Guru berpartisipasi aktif dalam kegiatan ekstrakurikuler..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_1"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_1_11" model="kategori.keterangan">
-                <field name="keterangan">Guru berpartisispasi aktif dalam kegiatan peningkatan prestasi sekolah..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_1"/>
-            </record>
+    <record id="kategori_keterangan_2_1_11" model="kategori.keterangan">
+        <field name="keterangan">Guru berpartisispasi aktif dalam kegiatan peningkatan prestasi sekolah..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_1"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-        <record id="kategori_jenis_2_2" model="kategori.jenis">
-            <field name="jenis">Hubungan Guru Dengan Teman</field>
-            <field name="group_id" ref="kategori_group_2"/>
-        </record>
+    <record id="kategori_jenis_2_2" model="kategori.jenis">
+        <field name="jenis">Hubungan Guru Dengan Teman</field>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_2_1" model="kategori.keterangan">
-                <field name="keterangan">Guru bersikap ramah kepada saya atau orang lain..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_2"/>
-            </record>
+    <record id="kategori_keterangan_2_2_1" model="kategori.keterangan">
+        <field name="keterangan">Guru bersikap ramah kepada saya atau orang lain..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_2"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_2_2" model="kategori.keterangan">
-                <field name="keterangan">Guru berbahasa santun kepada saya atau orang lain..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_2"/>
-            </record>
+    <record id="kategori_keterangan_2_2_2" model="kategori.keterangan">
+        <field name="keterangan">Guru berbahasa santun kepada saya atau orang lain..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_2"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_2_3" model="kategori.keterangan">
-                <field name="keterangan">Guru memberi motivasi kepada saya atau teman-teman guru lain..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_2"/>
-            </record>
+    <record id="kategori_keterangan_2_2_3" model="kategori.keterangan">
+        <field name="keterangan">Guru memberi motivasi kepada saya atau teman-teman guru lain..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_2"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_2_4" model="kategori.keterangan">
-                <field name="keterangan">Guru pandai berkomunikasi secara lisan atau tertulis..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_2"/>
-            </record>
+    <record id="kategori_keterangan_2_2_4" model="kategori.keterangan">
+        <field name="keterangan">Guru pandai berkomunikasi secara lisan atau tertulis..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_2"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_2_5" model="kategori.keterangan">
-                <field name="keterangan">Guru memotivasi diri dan rekan sejawat secara aktif dan kreatif dalam melaksanakan proses pendidikan..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_2"/>
-            </record>
+    <record id="kategori_keterangan_2_2_5" model="kategori.keterangan">
+        <field name="keterangan">Guru memotivasi diri dan rekan sejawat secara aktif dan kreatif dalam melaksanakan proses pendidikan..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_2"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_2_6" model="kategori.keterangan">
-                <field name="keterangan">Guru menciptakan suasana kekeluargaan di dalam dan luar sekolah..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_2"/>
-            </record>
+    <record id="kategori_keterangan_2_2_6" model="kategori.keterangan">
+        <field name="keterangan">Guru menciptakan suasana kekeluargaan di dalam dan luar sekolah..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_2"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_2_7" model="kategori.keterangan">
-                <field name="keterangan">Guru mudah bekerjasama dengan saya atau guru lainnya..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_2"/>
-            </record>
+    <record id="kategori_keterangan_2_2_7" model="kategori.keterangan">
+        <field name="keterangan">Guru mudah bekerjasama dengan saya atau guru lainnya..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_2"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_2_8" model="kategori.keterangan">
-                <field name="keterangan">Guru bersedia diajak berdikusi tentang segala hal terkait kepentingan peserta didik dan sekolah..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_2"/>
-            </record>
+    <record id="kategori_keterangan_2_2_8" model="kategori.keterangan">
+        <field name="keterangan">Guru bersedia diajak berdikusi tentang segala hal terkait kepentingan peserta didik dan sekolah..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_2"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_2_9" model="kategori.keterangan">
-                <field name="keterangan">Guru bersedia membantu menyelesaikan masalah saya dan guru lainnya..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_2"/>
-            </record>
+    <record id="kategori_keterangan_2_2_9" model="kategori.keterangan">
+        <field name="keterangan">Guru bersedia membantu menyelesaikan masalah saya dan guru lainnya..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_2"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_2_10" model="kategori.keterangan">
-                <field name="keterangan">Guru menghargai kemampuan saya dan guru lainnya..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_2"/>
-            </record>
+    <record id="kategori_keterangan_2_2_10" model="kategori.keterangan">
+        <field name="keterangan">Guru menghargai kemampuan saya dan guru lainnya..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_2"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-        <record id="kategori_jenis_2_3" model="kategori.jenis">
-            <field name="jenis">Perilaku Profesional Guru</field>
-            <field name="group_id" ref="kategori_group_2"/>
-        </record>
+    <record id="kategori_jenis_2_3" model="kategori.jenis">
+        <field name="jenis">Perilaku Profesional Guru</field>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_3_1" model="kategori.keterangan">
-                <field name="keterangan">Guru memiliki kretivitas dalam pembelajaran..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_3"/>
-            </record>
+    <record id="kategori_keterangan_2_3_1" model="kategori.keterangan">
+        <field name="keterangan">Guru memiliki kretivitas dalam pembelajaran..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_3"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_3_2" model="kategori.keterangan">
-                <field name="keterangan">Guru memiliki pengetahuan dan keterampilan Teknologi Informasi (TI) yang memadai..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_3"/>
-            </record>
+    <record id="kategori_keterangan_2_3_2" model="kategori.keterangan">
+        <field name="keterangan">Guru memiliki pengetahuan dan keterampilan Teknologi Informasi (TI) yang memadai..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_3"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_3_3" model="kategori.keterangan">
-                <field name="keterangan">Guru memiliki perangkat pembelajaran yang lengkap..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_3"/>
-            </record>
+    <record id="kategori_keterangan_2_3_3" model="kategori.keterangan">
+        <field name="keterangan">Guru memiliki perangkat pembelajaran yang lengkap..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_3"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_3_4" model="kategori.keterangan">
-                <field name="keterangan">Guru ada di sekolah meskipun  tidak mengajar di kelas..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_3"/>
-            </record>
+    <record id="kategori_keterangan_2_3_4" model="kategori.keterangan">
+        <field name="keterangan">Guru ada di sekolah meskipun  tidak mengajar di kelas..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_3"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_3_5" model="kategori.keterangan">
-                <field name="keterangan">Guru memulai  pembelajaran tepat waktu..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_3"/>
-            </record>
+    <record id="kategori_keterangan_2_3_5" model="kategori.keterangan">
+        <field name="keterangan">Guru memulai  pembelajaran tepat waktu..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_3"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_3_6" model="kategori.keterangan">
-                <field name="keterangan">Guru mengakhiri pembelajaran tepat waktu..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_3"/>
-            </record>
+    <record id="kategori_keterangan_2_3_6" model="kategori.keterangan">
+        <field name="keterangan">Guru mengakhiri pembelajaran tepat waktu..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_3"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_3_7" model="kategori.keterangan">
-                <field name="keterangan">Guru memberikan tugas kepada peserta didik apa bila berhalangan hadir untuk mengajar..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_3"/>
-            </record>
+    <record id="kategori_keterangan_2_3_7" model="kategori.keterangan">
+        <field name="keterangan">Guru memberikan tugas kepada peserta didik apa bila berhalangan hadir untuk mengajar..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_3"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_3_8" model="kategori.keterangan">
-                <field name="keterangan">Guru memberi informasi kepada saya atau guru lain jika berhalangan hadir untuk mengajar..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_3"/>
-            </record>
+    <record id="kategori_keterangan_2_3_8" model="kategori.keterangan">
+        <field name="keterangan">Guru memberi informasi kepada saya atau guru lain jika berhalangan hadir untuk mengajar..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_3"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 
-            <record id="kategori_keterangan_2_3_9" model="kategori.keterangan">
-                <field name="keterangan">Guru memperlakukan peserta didik dengan penuh kasih sayang..</field>
-                <field name="jenis_id" ref="kategori_jenis_2_3"/>
-            </record>
+    <record id="kategori_keterangan_2_3_9" model="kategori.keterangan">
+        <field name="keterangan">Guru memperlakukan peserta didik dengan penuh kasih sayang..</field>
+        <field name="jenis_id" ref="kategori_jenis_2_3"/>
+        <field name="group_id" ref="kategori_group_2"/>
+    </record>
 </odoo>
