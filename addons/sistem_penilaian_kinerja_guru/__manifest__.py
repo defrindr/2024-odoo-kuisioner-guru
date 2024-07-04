@@ -26,14 +26,14 @@
         'security/res_groups.xml',
         'security/ir.model.access.csv',
         'security/ir_rule.xml',  # Path ke file ir_rule.xml
+        'views/nilai_total.xml',
         'reports/report_total_nilai.xml',
-        'views/views.xml',
         'views/templates.xml',
         'views/penilaian_kepala_sekolah.xml',
         'views/penilaian_teman_sejawat.xml',
         'views/penilaian_wali_murit.xml',
         'views/penilaian_peserta_didik.xml',
-        'views/nilai_total.xml',
+        'views/views.xml',
         'views/graph_total_nilai.xml',
     ],
     # only loaded in demonstration mode

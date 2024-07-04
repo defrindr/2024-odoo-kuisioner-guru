@@ -23,10 +23,10 @@
                                     <td colspan="10"><span t-field="o.name"/></td>
                                     <td colspan="10"></td>
                                 </tr>
-                                 <tr>
+                                <tr>
                                     <td align="left" colspan="4">Nama Guru</td>
                                     <td>:</td>
-                                    <td colspan="10"><span t-field="o.data_guru_id"/></td>
+                                    <td colspan="10"><span t-field="o.data_guru_id.name"/></td>
                                     <td colspan="10"></td>
                                 </tr>
                             </table>
@@ -39,6 +39,8 @@
                                         <td align="center" colspan="2"><b>Proporsi</b></td>
                                         <td align="center" colspan="2"><b>Nilai (Konversi)</b></td>
                                     </tr>
+                                </thead>
+                                <tbody>
                                     <tr class="text-center">
                                         <td align="center">1</td>
                                         <td align="center" colspan="6">Atasan (Kepala Sekolah)</td>
@@ -71,16 +73,32 @@
                                         <td colspan="7" align="center">Nilai PKG = Jumlah Nilai</td>
                                         <td colspan="6" align="center"><span t-field="o.total_nilai"/></td>
                                     </tr>
-                                </thead>
+                                </tbody>
                             </table>
+                            <br/>
+                            <div style="margin-top: 50px;width:100%">
+                                <div class="text-center">
+                                    <p>Jombang, <span t-esc="time.strftime('%d %B %Y')"/></p>
+                                </div>
+                                <table class="table table-borderless">
+                                    <td class="col-xs-6 text-center" style="width:48vw" colspan="6">
+                                        <p>Guru Yang Dinilai</p>
+                                        <br/><br/>
+                                        <p><span t-field="o.data_guru_id"/></p>
+                                        <p>NIP: <span t-field="o.data_guru_id.nip"/></p>
+                                    </td>
+                                    <td class="col-xs-6 text-center" style="width:48vw">
+                                        <p>Kepala Sekolah</p>
+                                        <br/><br/>
+                                        <p><span t-field="o.data_kepala_sekolah_id.name"/></p>
+                                        <p>NIP: <span t-field="o.data_kepala_sekolah_id.nip"/></p>
+                                    </td>
+                                </table>
+                            </div>
                         </div>
                     </t>
                 </t>
             </t>
         </template>
-
     </data>
 </odoo>
-
-
-

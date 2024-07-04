@@ -13,6 +13,7 @@
                         <group>
                             <field name="name" />
                             <field name="data_guru_id" />
+                            <field name="data_kepala_sekolah_id" />
                         </group>
                         <group>
                             <group string="Hasil Penilaian Kepala Sekolah">

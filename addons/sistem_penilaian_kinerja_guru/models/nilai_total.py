@@ -1,3 +1,4 @@
+import locale
 from odoo import _, api, fields, models
 from datetime import date, datetime
 from dateutil.relativedelta import relativedelta
@@ -6,13 +7,62 @@ from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT as DATETIME_FORMAT
 
 
 
+import logging
+_logger = logging.getLogger(__name__)
 
 class NilaiTotal(models.Model):
     _name = 'nilai.total'
     _description = 'Model untuk tabel data nilai total'
 
     name = fields.Date(string='Tanggal', default=datetime.now(), required=True)
+    @api.depends('name')
+    def _compute_tanggal_indonesia(self):
+        for order in self:
+            if order.name:
+                tanggal = order.name.strftime('%d %B %Y')
+                order.tanggal_indonesia = self._map_format_tanggal(tanggal)
+
+    def _map_format_tanggal(self, tanggal):
+        format_mapping = {
+            '01': '01', '02': '02', '03': '03', '04': '04', '05': '05', '06': '06',
+            '07': '07', '08': '08', '09': '09', '10': '10', '11': '11', '12': '12',
+            'January': 'Januari', 'February': 'Februari', 'March': 'Maret',
+            'April': 'April', 'May': 'Mei', 'June': 'Juni', 'July': 'Juli',
+            'August': 'Agustus', 'September': 'September', 'October': 'Oktober',
+            'November': 'November', 'December': 'Desember'
+        }
+
+        parts = tanggal.split()
+        day = parts[0]
+        month = format_mapping[parts[1]]
+        year = parts[2]
+
+        return f"{day} {month} {year}"
+
+    tanggal_indonesia = fields.Char(string="Tanggal (Indonesia)", compute='_compute_tanggal_indonesia', store=True)
+
     data_guru_id = fields.Many2one(comodel_name='data.guru', string='Nama Guru', required=True, ondelete="cascade")
+
+    data_kepala_sekolah_id = fields.Many2one(comodel_name='res.users', string='Nama Kepala Sekolah', ondelete="cascade", compute="_compute_kepala_sekolah", store=True)
+    
+    @api.depends('data_guru_id')
+    def _compute_kepala_sekolah(self):
+        for rec in self:
+            # Retrieve users belonging to a specific group ID
+            group = self.env['res.groups'].browse(24)
+            rec.data_kepala_sekolah_id=1
+            print(group)
+            if group:
+                users = group.users
+                if users:
+                    rec.data_kepala_sekolah_id = users[0].id
+                    _logger.info('pon', users[0].id)
+                else:
+                    _logger.info('notpon')
+                    rec.data_kepala_sekolah_id = -1
+            else:
+                rec.data_kepala_sekolah_id = 0
+                _logger.info('notpon')
 
     # HASIL PENILAIAN KEPALA SEKOLAH
     penilaian_kepala_sekolah = fields.Float(string='Hasil Penilaian Kepala Sekolah', compute="_compute_hasil_penilaian_kepala_sekolah")

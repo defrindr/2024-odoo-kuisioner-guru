@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="1">
+        <record id="action_report_nilai_total" model="ir.actions.report">
+            <field name="name">Report Total</field>
+            <field name="model">nilai.total</field>
+            <field name="report_type">qweb-html</field>
+            <field name="report_name">sistem_penilaian_kinerja_guru.report_nilai_total</field>
+            <field name="report_file">sistem_penilaian_kinerja_guru.report_nilai_total</field>
+            <field name="binding_model_id" ref="sistem_penilaian_kinerja_guru.model_nilai_total" />
+            <field name="binding_type">report</field>
+        </record>
+
+        <template id="report_nilai_total">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <table class="tg" style="undefined;table-layout: fixed; width: 100%">
+                                <tr>
+                                    <td align="left" colspan="4">Tanggal Penilaian</td>
+                                    <td>:</td>
+                                    <td colspan="10">
+                                        <span t-field="o.name" />
+                                    </td>
+                                    <td colspan="10"></td>
+                                </tr>
+                                <tr>
+                                    <td align="left" colspan="4">Nama Guru</td>
+                                    <td>:</td>
+                                    <td colspan="10">
+                                        <span t-field="o.data_guru_id" />
+                                    </td>
+                                    <td colspan="10"></td>
+                                </tr>
+                            </table>
+                            <table class="table table-bordered border-primary">
+                                <thead>
+                                    <tr class="text-center">
+                                        <td align="center">
+                                            <b>No</b>
+                                        </td>
+                                        <td align="center" colspan="6">
+                                            <b>Penilaian</b>
+                                        </td>
+                                        <td align="center" colspan="2">
+                                            <b>Hasil Penilaian</b>
+                                        </td>
+                                        <td align="center" colspan="2">
+                                            <b>Proporsi</b>
+                                        </td>
+                                        <td align="center" colspan="2">
+                                            <b>Nilai (Konversi)</b>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <td align="center">1</td>
+                                        <td align="center" colspan="6">Atasan (Kepala Sekolah)</td>
+                                        <td align="center" colspan="2">
+                                            <span t-field="o.penilaian_kepala_sekolah" />
+                                        </td>
+                                        <td align="center" colspan="2">40%</td>
+                                        <td align="center" colspan="2">
+                                            <span t-field="o.hasil_nilai_bobot_kepala_sekolah" />
+                                        </td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <td align="center">2</td>
+                                        <td align="center" colspan="6">Guru Teman Sejawat</td>
+                                        <td align="center" colspan="2">
+                                            <span t-field="o.penilaian_teman_sejawat" />
+                                        </td>
+                                        <td align="center" colspan="2">30%</td>
+                                        <td align="center" colspan="2">
+                                            <span t-field="o.hasil_nilai_bobot_teman_sejawat" />
+                                        </td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <td align="center">3</td>
+                                        <td align="center" colspan="6">Peserta Didik</td>
+                                        <td align="center" colspan="2">
+                                            <span t-field="o.penilaian_peserta_didik" />
+                                        </td>
+                                        <td align="center" colspan="2">20%</td>
+                                        <td align="center" colspan="2">
+                                            <span t-field="o.hasil_nilai_bobot_peserta_didik" />
+                                        </td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <td align="center">4</td>
+                                        <td align="center" colspan="6">Orang Tua/Wali Murid</td>
+                                        <td align="center" colspan="2">
+                                            <span t-field="o.penilaian_wali_murit" />
+                                        </td>
+                                        <td align="center" colspan="2">10%</td>
+                                        <td align="center" colspan="2">
+                                            <span t-field="o.hasil_nilai_bobot_wali_murit" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="7" align="center">Nilai PKG = Jumlah Nilai</td>
+                                        <td colspan="6" align="center">
+                                            <span t-field="o.total_nilai" />
+                                        </td>
+                                    </tr>
+                                </thead>
+                            </table>
+
+                            <table>
+                                <tr>
+                                    <td style="width: 60%">
+                                        XCobaaa
+                                    </td>
+                                    <td>Testing</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>
