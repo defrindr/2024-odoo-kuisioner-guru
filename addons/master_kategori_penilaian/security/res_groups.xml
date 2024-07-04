@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="master_kategori_penilaian" model="ir.module.category">
+            <field name="name">Akses Modul Master Kategori Penilaian</field>
+        </record>
+
+        <record id="group_kategori_penilaian" model="res.groups">
+            <field name="name">Read Only Data Kategori Penilaian</field>
+            <field name="category_id" ref="master_kategori_penilaian"/>
+        </record>
+
+        <record id="group_kategori_penilaian_admin" model="res.groups">
+            <field name="name">Admin Data Kategori Penilaian</field>
+            <field name="category_id" ref="master_kategori_penilaian"/>
+            <field name="implied_ids" eval="[(4, ref('group_kategori_penilaian') )]" />
+        </record>
+    </data>
+    
+</odoo>

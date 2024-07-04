@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_kategori_group,kategori.group,model_kategori_group,,1,1,1,1
+access_kategori_jenis,kategori.jenis,model_kategori_jenis,,1,1,1,1
+access_kategori_keterangan,kategori.keterangan,model_kategori_keterangan,,1,1,1,1

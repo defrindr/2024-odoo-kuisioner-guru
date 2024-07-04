@@ -1,0 +1,47 @@
+<!-- views/kategori_group_views.xml -->
+<odoo>
+    <record id="view_kategori_group_form" model="ir.ui.view">
+        <field name="name">kategori.group.form</field>
+        <field name="model">kategori.group</field>
+        <field name="arch" type="xml">
+            <form string="Kategori Grup" delete="false">
+                <sheet>
+                    <group>
+                        <field name="kategori" />
+                    </group>
+                    <field name="jenis_ids">
+                        <tree editable="bottom" action="open_model_c_form">
+                            <field name="jenis" />
+                        </tree>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_kategori_group_tree" model="ir.ui.view">
+        <field name="name">kategori.group.tree</field>
+        <field name="model">kategori.group</field>
+        <field name="arch" type="xml">
+            <tree delete="false">
+                <field name="kategori" />
+
+                <button string="Detail"
+                    name="%(action_kategori_jenis)d"
+                    type="action"
+                    context="{'search_default_kategori': id}"
+                    class="btn-primary" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_kategori_group" model="ir.actions.act_window">
+        <field name="name">Kategori Group</field>
+        <field name="res_model">kategori.group</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="master_kategori_penilaian_root" name="Kategori Penilaian" sequence="1" />
+    <menuitem id="menu_kategori_group" name="Grup" parent="master_kategori_penilaian_root"
+        action="action_kategori_group" sequence="10" />
+</odoo>
