@@ -8,6 +8,8 @@
                 <sheet>
                     <group>
                         <field name="kategori" />
+                        <field name="bobot" />
+                        <field name="sisa_bobot" />
                     </group>
                     <field name="jenis_ids">
                         <tree editable="bottom" action="open_model_c_form">
@@ -25,6 +27,7 @@
         <field name="arch" type="xml">
             <tree delete="false">
                 <field name="kategori" />
+                <field name="bobot" />
 
                 <button string="Detail"
                     name="%(action_kategori_jenis)d"

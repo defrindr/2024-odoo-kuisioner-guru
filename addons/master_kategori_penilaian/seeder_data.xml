@@ -3,6 +3,7 @@
     <record id="kategori_group_1" model="kategori.group">
         <field name="kategori">kepala_sekolah</field>
         <field name="name">Form Penilaian Kepala Sekolah</field>
+        <field name="bobot">40</field>
     </record>
 
     <record id="kategori_jenis_1_1" model="kategori.jenis">
@@ -297,6 +298,7 @@
     <record id="kategori_group_2" model="kategori.group">
         <field name="kategori">teman_sejawat</field>
         <field name="name">Form Penilaian Teman Sejawat</field>
+        <field name="bobot">30</field>
     </record>
 
     <record id="kategori_jenis_2_1" model="kategori.jenis">

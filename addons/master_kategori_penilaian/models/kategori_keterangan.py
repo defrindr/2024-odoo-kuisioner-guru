@@ -13,5 +13,10 @@ class KategoriKeterangan(models.Model):
     @api.onchange('keterangan')
     def _compute_group_id(self):
         for rec in self:
-            print(rec)
             rec.group_id = rec.jenis_id.group_id
+
+    def name_get(self):
+        result = []
+        for rec in self:
+            result.append((rec.id, rec.keterangan))
+        return result

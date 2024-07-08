@@ -1,4 +1,9 @@
 from odoo import fields, models, api
+from odoo.exceptions import ValidationError
+import logging
+
+_logger = logging.getLogger(__name__)
+
 
 class KategoriGroup(models.Model):
     _name = 'kategori.group'
@@ -15,7 +20,13 @@ class KategoriGroup(models.Model):
         ],
         required=True
     )
+    bobot = fields.Integer(
+        string="Bobot Nilai",
+        required=True,
+        store=True
+    )
 
+    sisa_bobot = fields.Integer(string='Sisa Bobot', store=False, default= lambda self: 100 - sum(self.search([]).mapped('bobot')),readonly=True)
     
     @api.depends("kategori")
     def _compute_name(self):
@@ -37,12 +48,33 @@ class KategoriGroup(models.Model):
     ]
 
 
-    def confirm(self):
-        # Perform any required logic here
+    @api.constrains('bobot')
+    def _check_bobot_sum(self):
+        for record in self:
+            # Calculate the total bobot sum excluding the current record
+            total_bobot = sum(self.search([]).mapped('bobot')) - record.bobot
+            _logger.info(f"total bobot: {total_bobot}")
+            # Add the bobot value of the current record
+            if total_bobot + record.bobot > 100:
+                raise ValidationError("Sum of Bobot cannot exceed 100.")
 
-        # Redirect to another page or action
-        return {
-            'type': 'ir.actions.act_url',
-            'url': '/my/custom/page',  # Replace with your desired URL or action
-            'target': 'self',  # Open in the same window/tab
-        }
+    @api.model
+    def create(self, vals):
+        # Perform additional checks before create
+        if 'bobot' in vals:
+            total_bobot = sum(self.search([]).mapped('bobot')) + vals['bobot']
+            _logger.info(f"total bobot: {total_bobot}")
+            if total_bobot > 100:
+                raise ValidationError("Sum of Bobot cannot exceed 100.")
+
+        return super(KategoriGroup, self).create(vals)
+
+    def write(self, vals):
+        # Perform additional checks before update
+        if 'bobot' in vals:
+            total_bobot = sum(self.search([]).mapped('bobot')) - self.bobot + vals['bobot']
+            _logger.info(f"total bobot: {total_bobot}")
+            if total_bobot > 100:
+                raise ValidationError("Sum of Bobot cannot exceed 100.")
+
+        return super(KategoriGroup, self).write(vals)
