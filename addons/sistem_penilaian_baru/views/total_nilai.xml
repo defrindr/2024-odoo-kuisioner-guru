@@ -1,0 +1,80 @@
+<odoo>
+    <data>
+
+        <!-- register form -->
+        <record id="mnilai_total_views_form" model="ir.ui.view">
+            <field name="name">mnilai_total_views.form</field>
+            <field name="model">mnilai.total</field>
+            <field name="arch" type="xml">
+                <form string="Form Penilaian Untuk Kepsek">
+                    <sheet>
+                        <group>
+                            <field name="guru_id" />
+                            <field name="tanggal" />
+                            <field name="data_kepala_sekolah_id" />
+                        </group>
+                        <group>
+                            <field name="nilai_kepala_sekolah" />
+                            <field name="nilai_wali_murid" />
+                            <field name="nilai_teman_sejawat" />
+                            <field name="nilai_peserta_didik" />
+                        </group>
+                        <group>
+                            <field name="bobot_nilai_kepala_sekolah" />
+                            <field name="bobot_nilai_wali_murid" />
+                            <field name="bobot_nilai_teman_sejawat" />
+                            <field name="bobot_nilai_peserta_didik" />
+                        </group>
+                        <group>
+                            <field name="total_nilai_kepala_sekolah" />
+                            <field name="total_nilai_wali_murid" />
+                            <field name="total_nilai_teman_sejawat" />
+                            <field name="total_nilai_peserta_didik" />
+                        </group>
+                        <group>
+                            <field name="total_nilai" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- register tree -->
+        <record id="mnilai_total_views_tree" model="ir.ui.view">
+            <field name="name">mnilai_total_views.tree</field>
+            <field name="model">mnilai.total</field>
+            <field name="arch" type="xml">
+                <tree string="Daftar Nilai">
+                    <field name="tanggal" />
+                    <field name="guru_id" />
+                    <field name="total_nilai" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- bundle tree & form in window -->
+        <record id="mnilai_total_views_actions" model="ir.actions.act_window">
+            <field name="name">Rekap Nilai</field>
+            <field name="res_model">mnilai.total</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <!-- Register Menu - root menu -->
+        <menuitem
+            id="mpenilaian_kepsek_views_menu_root"
+            name="Sistem Penilaian Kinerja Guru"
+            sequence="1"
+        />
+
+        <!-- Current menu -->
+        <menuitem
+            id="mnilai_total_views_menu_window"
+            parent="mpenilaian_kepsek_views_menu_root"
+            name="Rekap Nilai"
+            action="mnilai_total_views_actions"
+            sequence="20"
+        />
+
+    </data>
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <templates>
+        <t t-name="GroupedWidgetTemplate">
+            <div>
+                <t t-foreach="widget.grouped_data" t-as="group">
+                    <div class="group-page">
+                        <h3><t t-esc="group.key"/></h3>
+                        <t t-foreach="group.value" t-as="record">
+                            <div class="record-item">
+                                <span t-esc="record.keterangan_id.display_name"/>: 
+                                <span t-esc="record.nilai"/>
+                            </div>
+                        </t>
+                    </div>
+                </t>
+            </div>
+        </t>
+    </templates>
+</odoo>

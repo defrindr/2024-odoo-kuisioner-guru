@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="mnilai_total_view_graph" model="ir.ui.view">
+            <field name="name">mnilai.total.view.graph</field>
+            <field name="model">mnilai.total</field>
+            <field name="arch" type="xml">
+                <graph string="" type="bar">
+                    <field name="guru_id" type="nilai" />
+                    <field name="tanggal"  type="date" />
+                    <field name="total_nilai"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id="mnilai_total_graph_action" model="ir.actions.act_window">
+            <field name="name">Graph Hasil Penilaian Kinerja Guru</field>
+            <field name="res_model">mnilai.total</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">graph</field>
+        </record>
+
+        <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+        <menuitem 
+            id="mpenilaian_kepsek_views_menu_root" 
+            name="Sistem Penilaian Kinerja Guru"
+            sequence="1"/>
+
+       <!-- This Menu Item must have a parent and an action -->
+        <menuitem 
+            id="graph_mnilai_total_menu_act" 
+            name="Graph Nilai Total" 
+            parent="mpenilaian_kepsek_views_menu_root" 
+            action="mnilai_total_graph_action" 
+            sequence="30"/>
+    </data>
+</odoo>

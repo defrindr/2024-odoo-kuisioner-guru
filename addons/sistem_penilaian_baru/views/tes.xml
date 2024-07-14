@@ -1,0 +1,14 @@
+<odoo>
+    <template id="new_custom_view">
+        <div class="row">
+            <h2>List Pertanyaan</h2>
+            <ul class="question-list">
+                <t t-foreach="penilaian_kepsek_detail_ids" t-as="record">
+                    <li>
+                        <t t-esc="record.nilai" />
+                    </li>
+                </t>
+            </ul>
+        </div>
+    </template>
+</odoo>

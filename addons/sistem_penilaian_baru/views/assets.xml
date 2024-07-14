@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- * Copyright 2014 Sudokeys <http://www.sudokeys.com>
+ * Copyright 2017 Komit - <http:///komit-consulting.com>
+ * Copyright 2019 Alexandre Díaz - <dev@redneboa.es>
+ * License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).-->
+<odoo>
+    <template
+        id="assets_end"
+        name="sistem_penilaian_baru_assets"
+        inherit_id="web.assets_backend"
+    >
+        <xpath expr="." position="inside">
+            <script
+                type="text/javascript"
+                src="/sistem_penilaian_baru/static/src/js/console_log_widget.js"
+            />
+        </xpath>
+    </template>
+</odoo>

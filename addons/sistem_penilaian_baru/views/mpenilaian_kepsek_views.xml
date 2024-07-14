@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- register form -->
+        <record id="mpenilaian_kepsek_views_form" model="ir.ui.view">
+            <field name="name">mpenilaian_kepsek_views.form</field>
+            <field name="model">mpenilaian.kepsek</field>
+            <field name="arch" type="xml">
+                <form string="Form Penilaian Untuk Kepsek">
+                    <sheet>
+                        <group>
+                            <field name="tanggal" />
+                            <field name="nama_responden" />
+                            <field name="jabatan" />
+                            <field name="data_guru_id" />
+                            <field name="group_id"/>
+                            <field name="status" />
+                            <field name="total_nilai" />
+                        </group>
+                        <notebook string="Poin Poin penilaian"
+                            attrs="{'invisible': [('id','=', False)]}">
+                            <page string="Poin 1">
+                                <field name="penilaian_kepsek_detail_ids" widget="grouped_widget">
+                                    <tree editable="bottom" create="false" limit="1000">
+                                        <field name="jenis_id" readonly="1" />
+                                        <field name="keterangan_id" readonly="1" />
+                                        <field name="nilai" />
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- register tree -->
+        <record id="mpenilaian_kepsek_views_tree" model="ir.ui.view">
+            <field name="name">mpenilaian_kepsek_views.tree</field>
+            <field name="model">mpenilaian.kepsek</field>
+            <field name="arch" type="xml">
+                <tree string="Daftar Pengisian Kuisioner">
+                    <field name="tanggal" />
+                    <field name="nama_responden" />
+                    <field name="jabatan" />
+                    <field name="data_guru_id" />
+                    <field name="status" />
+                    <field name="total_nilai" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- bundle tree & form in window -->
+        <record id="mpenilaian_kepsek_views_actions" model="ir.actions.act_window">
+            <field name="name">Penilaian</field>
+            <field name="res_model">mpenilaian.kepsek</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <!-- Register Menu - root menu -->
+        <menuitem
+            id="mpenilaian_kepsek_views_menu_root"
+            name="Sistem Penilaian Kinerja Guru"
+            sequence="1"
+        />
+
+        <!-- Current menu -->
+        <menuitem
+            id="mpenilaian_kepsek_views_menu_window"
+            parent="mpenilaian_kepsek_views_menu_root"
+            name="Penilaian"
+            action="mpenilaian_kepsek_views_actions"
+            sequence="10"
+        />
+
+
+    </data>
+</odoo>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <templates>
+        <t t-name="ConsoleLogWidgetTemplate">
+            <div>
+                <p>This is a console log widget.</p>
+            </div>
+        </t>
+    </templates>
+</odoo>
